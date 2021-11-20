@@ -8,6 +8,7 @@ Simply installed and run in any computer
 ```
 git clone https://github.com/Rithingithub/keylogger.git
 cd keylogger
+pip install pynput
 python3 keylogger.py
 ```
 ## Show captured keylogs
